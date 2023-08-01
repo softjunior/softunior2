@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>FORMULAIRE</title>
+</head>
+
+<body>
+    <form method="post" action="index.html">
+        <fieldset>
+            <legend>Formulaire De Connexion</legend>
+            <img src="1.JPG">
+            <hr>
+            <table>
+
+                <tr>
+                    <th>E-mail</th>
+                </tr>
+                <tr>
+                    <td><input type="email" required id="mail" title="entrer votre email" placeholder="Entrer votre e-mail ici"></td>
+                </tr>
+                <tr>
+                    <th>Mot de passe</th>
+                </tr>
+                <tr>
+                    <td><input type="password" required id="mdp" title="entrer votre mot de passe" placeholder="Entrer votre mot de passe ici"></td>
+                </tr>
+                
+            </table>
+            <br>
+            <hr>
+            <br>
+            <input class="confirm" type="submit" value="VALIDER" onclick="val()">&NonBreakingSpace;
+            <input class="reset" type="reset" value="ANNULER">
+            <br><br>
+            <a href="formular.html">cliquer ici pour creer un compte</a>
+        </fieldset>
+    </form>
+    <style>
+        fieldset {
+            width: 300px;
+            border-radius: 15px;
+            height: 450px;
+            background-color: white;
+        }
+
+        legend {
+            text-align: center;
+        }
+        .confirm{
+            
+            width: 48%;
+            border-radius: 8px;
+            background-color: green;
+            cursor: pointer;
+        }
+        .confirm:hover{
+            
+            width: 48%;
+            border-radius: 8px;
+            background-color: green;
+            cursor: pointer;
+        }
+        .reset:hover{
+            width: 48%;
+            border-radius: 8px;
+            position:relative;
+            background-color:red;
+            cursor: pointer;
+            
+        }
+        .reset{
+            width: 48%;
+            border-radius: 8px;
+            position:relative;
+            background-color:red;
+            cursor: pointer;
+            
+        }
+        input{
+            border-radius:8px;
+            width: 300px;
+            height: 30px;
+            text-align: center;
+        }
+        input:hover{
+            border-radius:8px;
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            border-color: aqua;
+            border-top:none;
+            border-right: none;
+            border-left: none ;
+        }
+        .a{
+            height: auto;
+        }
+        th{
+            width: 300px;
+            font-size: 15px;
+            margin: top 1px;
+        }
+        .qw{
+            margin-top: 20px;
+            display:flex;
+            padding: 120%;
+            width: 10px;
+
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            margin-left:80px;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        a:hover{
+            text-decoration: none;
+            text-align: center;
+            color: red;
+        }
+        body{
+            margin-left: 40%;
+            padding-top: 5%;
+        }
+        hr{
+            height: 2px;
+            border-radius: 100px;
+            background-color: black;
+
+        }
+    </style>
+    <script>
+        function val(){
+
+        
+            var a=document.getElementById('mail').value;
+            var b=document.getElementById('mdp').value;
+
+            if((a=="fokojunior21@gmail.com")&&(b=="foko@1234")){
+                alert("Bienvenue administrateur Junior");
+            }
+            else if((a!="")&&(b!="")){
+                alert("Heureux de vous revoir "+a);
+            }
+            else{
+                alert("Remplissez les champs vident");
+            }
+    }
+    </script>
+</body>
+
+</html>

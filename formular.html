@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>FORMULAIRE</title>
+</head>
+
+<body>
+    <form method="post" action="index.html">
+        <fieldset>
+            <legend>Formulaire D'inscription</legend>
+            <img src="1.JPG">
+            <hr>
+            <table>
+                <tr>
+                    <th>Nom</th>
+                </tr>
+                <tr>
+                    <td><input type="text" required id="name"></td>
+                </tr>
+                <tr>
+                    <th>Prenom</th>
+                </tr>
+                <tr>
+                    <td><input type="text" required id="prenom"></td>
+                </tr>
+                <tr>
+                    <th class="sex">         Sexe
+                        <select>
+                            <option></option>
+                            <option>Feminin</option>
+                            <option>Masculin</option>
+                            <option>autre</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                </tr>
+                <tr>
+                    <td><input type="email" required id="mail"></td>
+                </tr>
+                <tr>
+                    <th>Mot de passe</th>
+                </tr>
+                <tr>
+                    <td><input type="password" required id="mdp2"></td>
+                </tr>
+                <tr>
+                    <th>Repeter le Mot de passe</th>
+                </tr>
+                <tr>
+                    <td><input type="password" required id="mdp1"></td>
+                </tr>
+                
+            </table>
+            <br>
+            <hr>
+            <br>
+            <input class="confirm" type="submit" value="VALIDER" onclick="val()">&NonBreakingSpace;
+            <input class="reset" type="reset" value="ANNULER">
+            <br><br>
+            <a href="formular 2.html">cliquer ici pour vous connecter</a>
+        </fieldset>
+    </form>
+    <style>
+        fieldset {
+            width: 300px;
+            border-radius: 15px;
+            height: 640px;
+            background-color: white;
+        }
+
+        legend {
+            text-align: center;
+        }
+        .confirm{
+            
+            width: 48%;
+            border-radius: 8px;
+            background-color: green;
+            cursor: pointer;
+        }
+        .confirm:hover{
+            
+            width: 48%;
+            border-radius: 8px;
+            background-color: green;
+            cursor: pointer;
+        }
+        .reset:hover{
+            width: 48%;
+            border-radius: 8px;
+            position:relative;
+            background-color:red;
+            cursor: pointer;
+            
+        }
+        .reset{
+            width: 48%;
+            border-radius: 8px;
+            position:relative;
+            background-color:red;
+            cursor: pointer;
+            
+        }
+        input{
+            border-radius:8px;
+            width: 300px;
+            height: 30px;
+            text-align: center;
+        }
+        input:hover{
+            border-radius:8px;
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            border-color: aqua;
+        }
+        .a{
+            height: auto;
+        }
+        th{
+            width: 300px;
+            font-size: 15px;
+            /*margin-top:;*/
+        }
+        .sex{
+            width: 20px;
+            font-size: 15px;
+            text-align:left;
+            
+        }
+        .qw{
+            margin-top: 20px;
+            display:flex;
+            padding: 120%;
+            width: 10px;
+
+        }
+        img{
+            width: 130px;
+            height: 130px;
+            border-radius: 130px;
+            margin-left:85px;
+        }
+        select{
+            margin-top: 5%;
+            width: 88%;
+            height: 2%;
+            border: none;
+            padding-bottom: 5%;
+        }
+        option{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        body{
+            margin-left: 40%;
+            padding-top: 2%;
+        }
+
+    </style>
+    <script>
+        function val(){
+
+        
+            var a=document.getElementById('mail').value;
+            var b=document.getElementById('mdp').value;
+            var c=document.getElementById('name').value;
+            var d=document.getElementById('prenom').value;
+
+            if((a!="")&&(b!="")&&(c!="")&&(d!="")){
+                alert("Bienvenue "+c+" "+d);
+            }
+            else{
+                alert("Remplissez les champs vident");
+            }
+    }
+    </script>
+</body>
+
+</html>
